@@ -1,0 +1,38 @@
+#include <map>
+#include <iostream>
+using namespace std;
+int main(){
+    int people;
+    map<int, int> The_house;
+    map<int, int>::iterator z;
+    cout<<"How many houses are on this street?"<<endl;
+    int h_quantity;
+    cin>>h_quantity;
+    for(int i=0; i<h_quantity; i++){
+        cout<<"How many people live in the house"<<" "<<i+1<<" ?"<<endl;
+        cin>>people;
+        The_house[i]=people;;
+        };
+        int action;
+        int action1;
+    while(true){
+        cout<<"What do you want to do?"<<endl;
+        cin>>action;
+        if(action==0){
+            cout<<"Write the number of the house, please."<<endl;
+            cin>>action1;
+            if(action1<=h_quantity){
+                cout<<"There is house "<<action1<<" where lived "<<The_house[action1-1]<<" people."<<endl;
+            }
+            else{
+                cout<<"There is no houses with this number"<<endl;}}
+        else if(action==1){
+            cout<<"What house you want to delete?"<<endl;
+            cin>>action1;
+            if (action1<=h_quantity){
+                The_house.erase(action1-1);}}
+        else if(action=2){
+            cout<<"How many people live in the house?"<<endl;
+            cin>>action1;
+            The_house[h_quantity]=action1;
+            h_quantity++;}}}
